@@ -14,7 +14,7 @@ cinst adblockpluschrome
 cinst paint.net 
 cinst DotNet4.5.1
 cinst skype 
-#cinst avastfreeantivirus 
+cinst avastfreeantivirus 
 
 
 Install-WindowsUpdate -AcceptEula
