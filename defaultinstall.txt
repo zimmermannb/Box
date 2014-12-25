@@ -1,0 +1,20 @@
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives es -EnableShowFileExtensions
+Enable-RemoteDesktop
+
+cinst 7zip.install
+cinst vlc
+cinst teamviewer 
+cinst imgburn 
+cinst procexp 
+cinst adobereader 
+cinst iTunes 
+cinst silverlight 
+cinst GoogleChrome 
+cinst adblockpluschrome 
+cinst paint.net 
+cinst DotNet4.5.1
+cinst skype 
+#cinst avastfreeantivirus 
+
+
+Install-WindowsUpdate -AcceptEula
