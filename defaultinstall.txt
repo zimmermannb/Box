@@ -6,8 +6,8 @@ New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -
 New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 1 -Force
 Restart-Service wuauserv
 
-#Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives es -EnableShowFileExtensions
-#Enable-RemoteDesktop
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
+Enable-RemoteDesktop
 
 cinst 7zip.install
 cinst vlc
@@ -16,10 +16,19 @@ cinst procexp
 cinst adobereader 
 cinst iTunes 
 cinst silverlight 
+#cinst paint.net
 cinst GoogleChrome 
 cinst adblockpluschrome 
 cinst DotNet4.5.1
-cinst skype 
+#cinst skype 
+cinst jre8
+cinst filezilla
+cinst firefox
+
+cinst ccleaner
+cinst flashplayeractivex
+cinst flashplayerplugin
+cinst hugin.install
 cinst avastfreeantivirus 
 
 Install-WindowsUpdate -AcceptEula
