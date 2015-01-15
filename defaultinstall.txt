@@ -1,20 +1,30 @@
+
+#set wsus
+$Wuserver = "http://server:8530/"
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value $Wuserver -Force -PropertyType String
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value $Wuserver -Force -PropertyType String
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 1 -Force
+Restart-Service wuauserv
+
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives es -EnableShowFileExtensions
 Enable-RemoteDesktop
 
 cinst 7zip.install
 cinst vlc
 cinst teamviewer 
-cinst imgburn 
 cinst procexp 
 cinst adobereader 
 cinst iTunes 
 cinst silverlight 
 cinst GoogleChrome 
 cinst adblockpluschrome 
-cinst paint.net 
 cinst DotNet4.5.1
 cinst skype 
 cinst avastfreeantivirus 
 
-
 Install-WindowsUpdate -AcceptEula
+
+Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
+Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 0 -Force
+Restart-Service wuauserv
