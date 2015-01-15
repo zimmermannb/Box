@@ -24,10 +24,12 @@ cinst DotNet4.5.1
 cinst jre8
 cinst filezilla
 cinst firefox
-
+cinst dropbox
+cinst evernote
 cinst ccleaner
 cinst hugin.install
 cinst avastfreeantivirus 
+
 
 Install-WindowsUpdate -AcceptEula
 
