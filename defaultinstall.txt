@@ -26,8 +26,6 @@ cinst filezilla
 cinst firefox
 
 cinst ccleaner
-cinst flashplayeractivex
-cinst flashplayerplugin
 cinst hugin.install
 cinst avastfreeantivirus 
 
