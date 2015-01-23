@@ -9,27 +9,34 @@ Restart-Service wuauserv
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
 Enable-RemoteDesktop
 
+#Install Office 2013
+if( -not (Test-Path -Path "C:\Program Files\Microsoft Office\Office15")){
+	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
+	."\\qnap\share\Programme\__Microsoft\__Office\installoffice.ps1"
+}else{
+	Write-Host "Office15 bereits installiert"
+}
+
 cinst 7zip.install
 cinst vlc
 cinst teamviewer 
 cinst procexp 
 cinst adobereader 
-cinst iTunes 
+#cinst iTunes 
 cinst silverlight 
 #cinst paint.net
 cinst GoogleChrome 
 cinst adblockpluschrome 
 cinst DotNet4.5.1
 #cinst skype 
-cinst jre8
-cinst filezilla
-cinst firefox
-cinst dropbox
-cinst evernote
+#cinst jre8
+#cinst filezilla
+#cinst firefox
+#cinst dropbox
+#cinst evernote
 cinst ccleaner
-cinst hugin.install
+#cinst hugin.install
 cinst avastfreeantivirus 
-
 
 Install-WindowsUpdate -AcceptEula
 
