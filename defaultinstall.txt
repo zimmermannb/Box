@@ -23,7 +23,7 @@ cinst teamviewer
 cinst procexp 
 cinst adobereader 
 cinst googleearth
-cints spotify
+cinst spotify
 #cinst iTunes 
 cinst silverlight 
 #cinst paint.net
