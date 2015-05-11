@@ -10,23 +10,23 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileEx
 Enable-RemoteDesktop
 
 #Install Office 2013
-#if( -not (Test-Path -Path "C:\Program Files\Microsoft Office\Office15")){
-#	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
-#	."\\qnap\share\Programme\__Microsoft\__Office\installoffice.ps1"
-#}else{
-#	Write-Host "Office15 bereits installiert"
-#}
+if( -not (Test-Path -Path "C:\Program Files\Microsoft Office\Office15")){
+	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
+	."\\qnap\share\Programme\__Microsoft\__Office\installoffice.ps1"
+}else{
+	Write-Host "Office15 bereits installiert"
+}
 
-cinst libreoffice
+
 cinst 7zip.install
 cinst vlc
 cinst teamviewer 
 cinst procexp 
-#cinst adobereader 
+cinst adobereader 
 #cinst googleearth
 #cinst spotify
 cinst iTunes 
-cinst silverlight 
+#cinst silverlight 
 #cinst paint.net
 cinst GoogleChrome 
 cinst adblockpluschrome 
