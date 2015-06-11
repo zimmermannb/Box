@@ -20,7 +20,7 @@ if( -not (Test-Path -Path "C:\Program Files\Microsoft Office\Office15")){
 
 cinst 7zip.install
 cinst vlc
-cinst teamviewer 
+#cinst teamviewer 
 cinst procexp 
 cinst adobereader 
 #cinst googleearth
@@ -30,6 +30,7 @@ cinst iTunes
 #cinst paint.net
 cinst GoogleChrome 
 cinst adblockpluschrome 
+choco install dotnet3.5
 cinst DotNet4.5.1
 #cinst skype 
 #cinst jre8
