@@ -25,7 +25,7 @@ cinst procexp
 cinst adobereader 
 #cinst googleearth
 #cinst spotify
-cinst iTunes 
+#cinst iTunes 
 #cinst silverlight 
 #cinst paint.net
 cinst GoogleChrome 
@@ -35,8 +35,8 @@ cinst adblockpluschrome
 cinst skype 
 #cinst jre8
 #cinst filezilla
-cinst firefox
-cinst dropbox
+#cinst firefox
+#cinst dropbox
 #cinst evernote
 #cinst ccleaner
 #cinst hugin.install
