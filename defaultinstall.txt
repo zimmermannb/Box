@@ -9,12 +9,12 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
 Enable-RemoteDesktop
 
-#Install Office 2013
-#if( -not (Test-Path -Path "C:\Program Files\Microsoft Office\Office15")){
+#Install Office 2016
+#if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
 #	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
-#	."\\qnap\share\Programme\__Microsoft\__Office\installoffice.ps1"
+#	."\\qnap\share\Programme\__Microsoft\__Office\installoffice2016.ps1"
 #}else{
-#	Write-Host "Office15 bereits installiert"
+#	Write-Host "Office16 bereits installiert"
 #}
 
 
@@ -35,7 +35,7 @@ cinst adblockpluschrome
 #cinst skype 
 #cinst jre8
 #cinst filezilla
-cinst firefox
+#cinst firefox
 #cinst dropbox
 #cinst evernote
 #cinst ccleaner
