@@ -1,21 +1,23 @@
 
 #set wsus
-#$Wuserver = "http://server:8530/"
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value $Wuserver -Force -PropertyType String
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value $Wuserver -Force #-PropertyType String
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 1 -Force
-#Restart-Service wuauserv
+$Wuserver = "http://server:8530/"
+New-Item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+New-item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value $Wuserver -Force -PropertyType String
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value $Wuserver -Force #-PropertyType String
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 1 -Force
+Restart-Service wuauserv
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
 Enable-RemoteDesktop
 
 #Install Office 2016
-#if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
-#	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
-#	."\\qnap\share\Programme\__Microsoft\__Office\installoffice2016.ps1"
-#}else{
-#	Write-Host "Office16 bereits installiert"
-#}
+if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
+	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
+	."\\qnap\share\Programme\__Microsoft\__Office\installoffice2016.ps1"
+}else{
+	Write-Host "Office16 bereits installiert"
+}
 
 
 cinst 7zip.install
@@ -26,7 +28,7 @@ cinst adobereader
 #cinst googleearth
 #cinst spotify
 cinst iTunes 
-#cinst silverlight 
+cinst silverlight 
 #cinst paint.net
 cinst GoogleChrome 
 cinst adblockpluschrome 
@@ -44,7 +46,7 @@ cinst avastfreeantivirus
 
 #Install-WindowsUpdate -AcceptEula
 
-#Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
-#Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 0 -Force
-#Restart-Service wuauserv
+Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
+Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 0 -Force
+Restart-Service wuauserv
