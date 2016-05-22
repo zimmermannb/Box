@@ -44,7 +44,7 @@ cinst adblockpluschrome
 #cinst hugin.install
 cinst avastfreeantivirus 
 
-#Install-WindowsUpdate -AcceptEula
+Install-WindowsUpdate -AcceptEula
 
 Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
 Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
