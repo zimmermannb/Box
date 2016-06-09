@@ -1,12 +1,12 @@
 
 #set wsus
-$Wuserver = "http://server:8530/"
-New-Item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
-New-item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
-New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value $Wuserver -Force -PropertyType String
-New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value $Wuserver -Force #-PropertyType String
-New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 1 -Force
-Restart-Service wuauserv
+#$Wuserver = "http://server:8530/"
+#New-Item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+#New-item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
+#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value $Wuserver -Force -PropertyType String
+#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value $Wuserver -Force #-PropertyType String
+#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 1 -Force
+#Restart-Service wuauserv
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
 Enable-RemoteDesktop
@@ -38,15 +38,15 @@ cinst adblockpluschrome
 #cinst jre8
 #cinst filezilla
 #cinst firefox
-#cinst dropbox
+cinst dropbox
 #cinst evernote
-#cinst ccleaner
+cinst ccleaner
 #cinst hugin.install
 cinst avastfreeantivirus 
 
 Install-WindowsUpdate -AcceptEula
 
-Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
-Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
-New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 0 -Force
-Restart-Service wuauserv
+#Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
+#Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
+#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 0 -Force
+#Restart-Service wuauserv
