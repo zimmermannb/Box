@@ -12,33 +12,33 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileEx
 Enable-RemoteDesktop
 
 #Install Office 2016
-if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
-	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
-	."\\qnap\share\Programme\__Microsoft\__Office\installoffice2016.ps1"
-}else{
-	Write-Host "Office16 bereits installiert"
-}
+#if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
+#	New-PSDrive -Name P -PSProvider FileSystem -Root \\qnap\share -Credential (Get-Credential)
+#	."\\qnap\share\Programme\__Microsoft\__Office\installoffice2016.ps1"
+#}else{
+#	Write-Host "Office16 bereits installiert"
+#}
 
 
 cinst 7zip.install
 cinst vlc
 #cinst teamviewer 
-cinst procexp 
+#cinst procexp 
 cinst adobereader 
 #cinst googleearth
 #cinst spotify
-cinst iTunes 
-cinst silverlight 
+#cinst iTunes 
+#cinst silverlight 
 #cinst paint.net
-cinst GoogleChrome 
-cinst adblockpluschrome 
+#cinst GoogleChrome 
+#cinst adblockpluschrome 
 #choco install dotnet3.5
 #cinst DotNet4.5.1
 #cinst skype 
 #cinst jre8
 #cinst filezilla
 #cinst firefox
-cinst dropbox
+#cinst dropbox
 #cinst evernote
 cinst ccleaner
 #cinst hugin.install
