@@ -9,7 +9,7 @@
 #Restart-Service wuauserv
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
-Enable-RemoteDesktop
+#Enable-RemoteDesktop
 
 #Install Office 2016
 if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
@@ -22,6 +22,7 @@ if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
 
 cinst 7zip.install
 cinst vlc
+cinst dropbox
 #cinst teamviewer 
 #cinst procexp 
 cinst adobereader 
@@ -44,7 +45,7 @@ cinst ccleaner
 #cinst hugin.install
 cinst avastfreeantivirus 
 
-Install-WindowsUpdate -AcceptEula
+#Install-WindowsUpdate -AcceptEula
 
 #Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
 #Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
