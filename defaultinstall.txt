@@ -1,15 +1,6 @@
 
-#set wsus
-#$Wuserver = "http://server:8530/"
-#New-Item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
-#New-item -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value $Wuserver -Force -PropertyType String
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value $Wuserver -Force #-PropertyType String
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 1 -Force
-#Restart-Service wuauserv
-
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
-#Enable-RemoteDesktop
+Enable-RemoteDesktop
 
 #Install Office 2016
 if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
@@ -21,6 +12,7 @@ if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
 
 
 cinst 7zip.install
+choco install winrar
 cinst vlc
 cinst dropbox
 #cinst teamviewer 
@@ -28,18 +20,21 @@ cinst dropbox
 cinst adobereader 
 #cinst googleearth
 #cinst spotify
-#cinst iTunes 
+cinst iTunes 
 #cinst silverlight 
 #cinst paint.net
-#cinst GoogleChrome 
-#cinst adblockpluschrome 
+cinst GoogleChrome 
+cinst adblockpluschrome 
 #choco install dotnet3.5
 #cinst DotNet4.5.1
 #cinst skype 
-#cinst jre8
+cinst jre8
 #cinst filezilla
-#cinst firefox
-#cinst dropbox
+cinst firefox
+choco install audacity
+choco install audacity-lame
+choco install inkscape
+choco install cdburnerxp
 #cinst evernote
 cinst ccleaner
 #cinst hugin.install
@@ -47,7 +42,3 @@ cinst avastfreeantivirus
 
 #Install-WindowsUpdate -AcceptEula
 
-#Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Force
-#Remove-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer
-#New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name UseWUServer -Value 0 -Force
-#Restart-Service wuauserv
