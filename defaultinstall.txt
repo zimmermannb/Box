@@ -14,8 +14,9 @@ if( -not (Test-Path -Path "C:\Program Files\Microsoft Office")){
 cinst 7zip.install
 #choco install winrar
 cinst vlc
-#cinst dropbox
-#cinst teamviewer 
+cinst treesizefree
+cinst dropbox
+cinst teamviewer 
 #cinst procexp 
 cinst adobereader 
 #cinst googleearth
@@ -23,7 +24,7 @@ cinst adobereader
 #cinst iTunes 
 #cinst silverlight 
 #cinst paint.net
-cinst GoogleChrome 
+#cinst GoogleChrome 
 cinst adblockpluschrome 
 #choco install dotnet3.5
 #cinst DotNet4.5.1
