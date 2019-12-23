@@ -16,9 +16,9 @@ cinst 7zip.install
 cinst vlc
 cinst notepadplusplus.install
 cinst treesizefree
-cinst dropbox
+#cinst dropbox
 cinst teamviewer 
-#cinst procexp 
+cinst procexp 
 cinst adobereader 
 #cinst googleearth
 #cinst spotify
@@ -40,7 +40,7 @@ cinst adblockpluschrome
 #cinst evernote
 #cinst ccleaner
 #cinst hugin.install
-cinst avastfreeantivirus 
+#cinst avastfreeantivirus 
 
 #Install-WindowsUpdate -AcceptEula
 
