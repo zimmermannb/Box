@@ -16,15 +16,16 @@ cinst 7zip.install
 cinst vlc
 cinst notepadplusplus.install
 cinst treesizefree
-#cinst dropbox
+cinst dropbox
 cinst teamviewer 
 cinst procexp 
 cinst adobereader 
 #cinst googleearth
-#cinst spotify
+cinst spotify
 cinst iTunes 
 #cinst silverlight 
-#cinst paint.net
+cinst paint.net
+cinst gimp
 cinst GoogleChrome 
 cinst adblockpluschrome 
 #choco install dotnet3.5
