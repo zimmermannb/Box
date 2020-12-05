@@ -15,15 +15,15 @@ cinst 7zip.install
 cinst vlc
 cinst notepadplusplus.install
 #cinst treesizefree
-#cinst dropbox
+cinst dropbox
 cinst teamviewer 
-cinst procexp 
+#cinst procexp 
 cinst adobereader 
 #cinst googleearth
-#cinst spotify
-#cinst iTunes 
+cinst spotify
+cinst iTunes 
 #cinst silverlight 
-#cinst paint.net
+cinst paint.net
 #cinst gimp
 cinst GoogleChrome 
 cinst adblockpluschrome 
@@ -41,6 +41,6 @@ cinst adblockpluschrome
 #cinst ccleaner
 #cinst hugin.install
 #cinst avastfreeantivirus 
-choco install microsoft-edge
-
+#choco install microsoft-edge
+cint keepass
 #Install-WindowsUpdate -AcceptEula
