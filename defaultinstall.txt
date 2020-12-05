@@ -26,7 +26,7 @@ cinst iTunes
 cinst paint.net
 #cinst gimp
 cinst GoogleChrome 
-cinst adblockpluschrome 
+#cinst adblockpluschrome 
 #choco install dotnet3.5
 #cinst DotNet4.5.1
 #cinst skype 
